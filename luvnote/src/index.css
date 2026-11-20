@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Syne:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-luv-black: #0D0D0D;
+  --color-luv-cream: #F5F0E8;
+  --color-luv-blush: #F2E4DE;
+  --color-luv-lavender: #C8B4CD;
+  --color-luv-pink: #D8BBC6;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Syne', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-luv-blush);
+  color: var(--color-luv-black);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hide scrollbar for a cleaner look, but keep functionality */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(13, 13, 13, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(13, 13, 13, 0.4);
+}
+
+/* Custom utilities */
+.text-massive {
+  font-size: clamp(4rem, 15vw, 12rem);
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+}
+
+.bg-blur-element {
+  filter: blur(40px);
+  opacity: 0.6;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Custom layout classes for the horizontal scroll */
+.horizontal-container {
+  display: flex;
+  width: max-content;
+  height: 100vh;
+}
+
+.section-panel {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
